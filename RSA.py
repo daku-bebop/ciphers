@@ -1,6 +1,4 @@
-#Mohammad Moiz Adil 
 #This program performs the encryption and decryption of the plaintext adi lmo or 000308 111214 through the RSA encryption system, for the public keys {n = 269959 & e = 107}
-#I am having issues exporting as html
 #encrypt
 print("plaintext = 000308\t111214\n")
 plaintext_1 = 308 #numerical equivalent of 
@@ -32,7 +30,7 @@ def euler_totient(n):
 print("euler's totient function of",n, "is",euler_totient(n))
 n = euler_totient(n)
 print("EEA\n\n")
-def EEA_fast(a,b): #taken from Joshua Schneider Trafalgar E207C |1C-EEA Methods Intro to Cryptology
+def EEA_fast(a,b): #from-1C-EEA Methods Intro to Cryptology
     s=[1,0]
     t=[0,1]
     n=1
