@@ -1,5 +1,5 @@
 import math 
-def text_z26(text):
+def text_z26(text):                 #takes string and converts to z26
     letter_map = {'a': 0, 'b': 1, 'c': 2, 'd': 3, 'e': 4, 'f': 5,
                   'g': 6, 'h': 7, 'i': 8, 'j': 9, 'k': 10, 'l': 11,
                   'm': 12, 'n': 13, 'o': 14, 'p': 15, 'q': 16, 'r': 17,
@@ -11,7 +11,7 @@ def text_z26(text):
    
     #blocks=[int(Z26[i:i+4]) for i in range(0,len(Z26),4)]
     
-    return Z26
+    return Z26                  #takes z26 string. use to convert back to plaintext
 def z26_text(Z26):
     letter_map = {0: 'a', 1: 'b', 2: 'c', 3: 'd', 4: 'e', 5: 'f',
                   6: 'g', 7: 'h', 8: 'i', 9: 'j', 10: 'k', 11: 'l',
@@ -26,7 +26,7 @@ def z26_text(Z26):
 #give p & q, should be large (miller-rabin)
 p = 283
 q= 313
-def generate_keypair(p,q):
+def generate_keypair(p,q): #takes two large pn, computes n and eulers totient pn returns tuple
     n = p * q
     pn = (p-1) * (q-1)
     e = 65537
@@ -43,7 +43,7 @@ def rsa_decrypt(ciphertext_blocks, d, n):
     decrypted = format(decrypted_block,'02d')
     return decrypted
 
-
+#main
 plaintext ='crypto'
 pint = text_z26(plaintext)
 plaintext_blocks = [int(pint[i:i+4]) for i in range(0,len(pint),4)]
