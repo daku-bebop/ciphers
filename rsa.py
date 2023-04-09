@@ -61,26 +61,4 @@ print("decrypted Z26\t\t[",dint,"]")
 
 
 
-#def rsa_encrypt(plaintext,e,n): 
- #   ciphertext = pow(int(pint),e,n)
-  #  print("ciphertext: ",ciphertext)
-  #  return ciphertext
-#def rsa_decrypt(ciphertext,e,n): 
-   #   pn=(p-1)*(q-1)
-    #d=pow(e,-1, pn) 
-    #print("decryption exponent:" , d) 
-    #plaintext= pow(int(ciphertext), d, n)
-    #print("plaintext: ",plaintext)
-    #z26=str(plaintext)
-    #text = ''
-    #for i in range(0,len(z26),2):
-    #    index = int(z26[i:i+2])
-    #    text+=chr(index+ ord('a'))
-    #print("text", text)
-    #return text
-
-#ciphertext = rsa_encrypt(pint,e,n)
-#rsa_decrypt(ciphertext,e,n)
-
-
-#rsa_decrypt(ciphertext,e,n)
+#
