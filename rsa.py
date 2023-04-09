@@ -47,18 +47,20 @@ def rsa_decrypt(ciphertext_blocks, d, n):
 plaintext ='crypto'
 pint = text_z26(plaintext)
 plaintext_blocks = [int(pint[i:i+4]) for i in range(0,len(pint),4)]
-print('plaintext:',plaintext,'  Z26:',plaintext_blocks)
+print('plaintext:',plaintext,'\t\t Z26:',plaintext_blocks)
 (n,e,d) = generate_keypair(p,q)
 ciphertext_blocks = [rsa_encrypt(block,e,n) for block in plaintext_blocks]
-print("ciphertext: \t\t", ciphertext_blocks)
+print("encrypted ciphertext: \t\t", ciphertext_blocks)
 ciphertext=''.join(ciphertext_blocks)
 cints=[int(block) for block in ciphertext_blocks]
 decrypted_plaintext=[rsa_decrypt(block,d,n) for block in cints]
+print("decrypted plaintext:\t\t",decrypted_plaintext)
 dint = ''.join(decrypted_plaintext)
+decrypted_str = ''.join(format(int(x)) for x in dint)
 
-print("decrypted Z26\t\t[",dint,"]")
-#print(z26_text(21724151914))
-
+#print(decrypted_str)
+decrypted_text = z26_text('021724151914')
+print("decrypted ciphertext:\t\t",decrypted_text)
 
 
 #
