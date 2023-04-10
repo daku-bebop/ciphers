@@ -8,7 +8,7 @@ def encrypt(plaintext, key): #shift each char with key val
             ciphertext += char
     return ciphertext
 
-plaintext = "unsecureity"
+plaintext = "kerfuffle"
 key = 10
 print("encrypting plaintext: ",plaintext," with key: ",key)
 ciphertext = encrypt(plaintext, key)
