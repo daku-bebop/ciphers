@@ -30,7 +30,7 @@ def generate_keypair(p,q): #takes two large pn, computes n and eulers totient pn
     n = p * q
     pn = (p-1) * (q-1)
     e = 65537
-    d = pow(e,-1,pn)
+    d = pow(e,-1,pn) 
     #print(d)
     return (n,e,d) 
 def rsa_encrypt(plaintext_blocks,e,n):
@@ -48,7 +48,7 @@ plaintext ='crypto'
 pint = text_z26(plaintext)
 plaintext_blocks = [int(pint[i:i+4]) for i in range(0,len(pint),4)]
 print('plaintext:',plaintext,'\t\t Z26:',plaintext_blocks)
-(n,e,d) = generate_keypair(p,q)
+(n,e,d) = generate_keypair(p,q)  
 ciphertext_blocks = [rsa_encrypt(block,e,n) for block in plaintext_blocks]
 print("encrypted ciphertext: \t\t", ciphertext_blocks)
 ciphertext=''.join(ciphertext_blocks)
